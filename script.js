@@ -136,3 +136,35 @@ setInterval(function () {
     }
 
 }, 1000);
+
+/* GALLERY SLIDESHOW */
+
+let galleryIndex = 0;
+
+showGallerySlides();
+
+function showGallerySlides() {
+
+    let i;
+
+    let slides = document.getElementsByClassName("gallerySlide");
+
+    for (i = 0; i < slides.length; i++) {
+
+        slides[i].style.display = "none";
+
+    }
+
+    galleryIndex++;
+
+    if (galleryIndex > slides.length) {
+
+        galleryIndex = 1;
+
+    }
+
+    slides[galleryIndex - 1].style.display = "block";
+
+    setTimeout(showGallerySlides, 3500);
+
+}
