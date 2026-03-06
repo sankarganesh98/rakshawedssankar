@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #7b0000;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+
+/* WELCOME SCREEN */
+
+#welcomeScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7b0000;
+    padding: 20px;
+}
+
+
+
+.welcomeCard {
+
+    background: rgba(0, 0, 0, 0.25);
+
+    padding: 40px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    backdrop-filter: blur(6px);
+
+    max-width: 400px;
+
+    width: 100%;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+.inviteTitle {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 36px;
+
+    color: gold;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.inviteSubtitle {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+}
+
+
+
+.inviteMessage {
+
+    color: #f4e4a6;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+}
+
+
+
+.inputGroup {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+
+
+#guestName {
+
+    padding: 12px;
+
+    width: 100%;
+
+    border-radius: 25px;
+
+    border: 2px solid gold;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    outline: none;
+
+}
+
+
+
+.inputGroup button {
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: #6b0000;
+
+    transition: .3s;
+
+}
+
+
+
+.inputGroup button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* LETTER PAGE */
+
+#letterScreen {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: #7b0000;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+
+.letterBox {
+
+    max-width: 750px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: gold;
+
+    font-family: 'Cinzel', serif;
+
+}
+
+
+
+.letterBox h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.letterBox p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+#enterBtn {
+
+    margin-top: 35px;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    border: none;
+
+    font-size: 16px;
+
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+
+    color: #6b0000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+
+#enterBtn:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* MAIN WEBSITE */
+
+#mainWebsite {
+
+    display: none;
+
+    background: #fff8f0;
+
+}
+
+
+
+/* HERO */
+
+.hero {
+
+    background: url("bg.png") center/cover no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+.overlay {
+
+    background: rgba(0, 0, 0, 0.55);
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    max-width: 700px;
+
+    width: 100%;
+
+}
+
+
+
+.couple {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 48px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.couple span {
+
+    color: gold;
+
+}
+
+
+
+.inviteText {
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* COUNTDOWN */
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.timeBox {
+
+    background: rgba(255, 255, 255, 0.2);
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    min-width: 70px;
+
+}
+
+
+
+.timeBox span {
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+}
+
+
+
+.weddingDate {
+
+    font-size: 16px;
+
+    margin-top: 10px;
+
+}
+
+
+
+/* EVENTS SECTION */
+
+.events {
+
+    padding: 60px 20px;
+
+    background: linear-gradient(#7b0000, #4b0000);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+
+.sectionTitle {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 36px;
+
+    color: gold;
+
+    margin-bottom: 40px;
+
+    text-shadow: 0 0 15px gold;
+
+}
+
+
+
+.eventGrid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+
+.eventCard {
+
+    background: white;
+
+    color: #333;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    border-top: 5px solid gold;
+
+    transition: .3s;
+
+}
+
+
+
+.eventCard:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.eventCard h3 {
+
+    font-family: 'Cinzel', serif;
+
+    color: #7b0000;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.eventCard p {
+
+    margin: 5px 0;
+
+    font-size: 15px;
+
+}
+
+
+
+.eventCard iframe {
+
+    width: 100%;
+
+    height: 220px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    margin-top: 10px;
+
+}
+
+
+
+/* FOOTER */
+
+.footer {
+
+    background: #7b0000;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+
+
+.footer h2 {
+
+    font-family: 'Cinzel', serif;
+
+    margin-bottom: 10px;
+
+    color: gold;
+
+}
+
+
+
+/* FLOWERS */
+
+.flower-container {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+}
+
+
+
+.flower {
+
+    position: absolute;
+
+    top: -40px;
+
+    font-size: 22px;
+
+    animation: fall linear infinite;
+
+}
+
+
+
+@keyframes fall {
+
+    0% {
+
+        transform: translateY(-50px) rotate(0deg);
+
+    }
+
+    100% {
+
+        transform: translateY(110vh) rotate(360deg);
+
+    }
+
+}
+
+
+
+/* TABLET */
+
+@media(min-width:768px) {
+
+    .couple {
+
+        font-size: 60px;
+
+    }
+
+    .inviteTitle {
+
+        font-size: 42px;
+
+    }
+
+    .eventGrid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+/* DESKTOP */
+
+@media(min-width:1024px) {
+
+    .eventGrid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .overlay {
+
+        padding: 60px;
+
+    }
+
+    .couple {
+
+        font-size: 70px;
+
+    }
+
+}
