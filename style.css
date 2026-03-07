@@ -589,25 +589,13 @@ body {
 }
 
 .galleryContainer {
-
-    max-width: 900px;
-
+    max-width: 1000px;
     margin: auto;
-
-    position: relative;
-
     overflow: hidden;
-
     border-radius: 15px;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-
+    position: relative;
 }
 
-.gallerySlide {
-    display: none;
-    text-align: center;
-}
 
 .gallerySlide img {
 
@@ -626,11 +614,7 @@ body {
 
 }
 
-.fade {
 
-    animation: fadeEffect 1.5s;
-
-}
 
 @keyframes fadeEffect {
 
@@ -746,4 +730,28 @@ body {
 
     }
 
+}
+
+.galleryTrack {
+    display: flex;
+    width: max-content;
+    animation: scrollGallery 35s linear infinite;
+}
+
+.galleryTrack img {
+    height: 420px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
